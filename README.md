@@ -75,3 +75,7 @@ docker-compose version 1.27.4, build 40524192
     $ docker-compose --version
     docker-compose version 1.27.4, build 40524192
     ```
+
+## ライセンス
+
+[MIT License](https://opensource.org/licenses/mit-license.php)
