@@ -16,7 +16,7 @@ docker-compose version 1.27.4, build 40524192
 1. piユーザをdockerグループに追加
 
     ```
-    usermod -aG docker pi
+    $ sudo usermod -aG docker pi
     ```
 
 1. docker-composeをgit clone  
