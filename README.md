@@ -14,9 +14,33 @@ docker-compose version 1.27.4, build 40524192
 
 ## Docker Composeのビルド
 1. piユーザをdockerグループに追加
-1. docker-composeをgit clone
+
+    ```
+    usermod -aG docker pi
+    ```
+
+1. docker-composeをgit clone  
+
+    ```
+    $ git clone https://github.com/docker/compose.git
+    ```
+    
 1. docker-composeをビルド  
-  ビルドは以下のスクリプトを使用しました。  
-  https://github.com/docker/compose/blob/master/script/build/linux
+
+    ```
+    $ python -m pip install --upgrade pip
+    $ ./script/build/linux
+    ```
+  
 1. docker-composeを/usr/local/binなどにコピー  
-  (他に、所有者/権限設定や/usr/bin/docker-composeにリンクを貼りました。)
+
+    ```
+    $ cd dist/
+    $ ls
+    docker-compose-Linux-armv7l
+    $ sudo cp docker-compose-Linux-armv7l /usr/local/bin/docker-compose
+    $ sudo chown root.root /usr/local/bin/docker-compose
+    $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    $ docker-compose --version
+    docker-compose version 1.27.4, build 40524192
+    ```
