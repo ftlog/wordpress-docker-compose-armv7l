@@ -8,9 +8,9 @@ linuxserver/mariadb
 https://hub.docker.com/r/linuxserver/mariadb  
 
 ## 動作確認環境
-Raspberry PI 4 (Raspbian GNU/Linux 10)
-Docker version 19.03.13, build 4484c46 (docker/stable,now 1.5-2 all [インストール済み])
-docker-compose version 1.27.4, build 40524192
+Raspberry PI 4 (Raspbian GNU/Linux 10)  
+Docker version 19.03.13, build 4484c46 (docker/stable,now 1.5-2 all [インストール済み])  
+docker-compose version 1.27.4, build 40524192  
 
 ## Docker Composeのビルド
 1. piユーザをdockerグループに追加
