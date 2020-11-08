@@ -12,7 +12,38 @@ Raspberry PI 4 (Raspbian GNU/Linux 10)
 Docker version 19.03.13, build 4484c46 (docker/stable,now 1.5-2 all [インストール済み])  
 docker-compose version 1.27.4, build 40524192  
 
-## Docker Composeのビルド
+## 使い方
+1. git clone
+
+    ```
+    $ git clone https://github.com/ftlog/wordpress-docker-compose-armv7l
+    ```
+
+1. docker-compose.ymlをコピー
+
+    ```
+    $ mkdir /home/pi/docker-compose-file
+    $ cp wordpress-docker-compose-armv7l/docker-compose.yml /home/pi/docker-compose-file
+    ```
+
+1. 起動
+
+    ```
+    $ cd /home/pi/docker-compose-file
+    $ docker-compose up -d
+    $ docker-compose ps
+    ```
+1. 停止
+
+    ```
+    $ docker-compose down
+    ```
+    データも含めて削除する場合は、
+    ```
+    $ docker-compose down --volumes
+    ```
+
+## (参考)Docker Composeのビルド
 1. piユーザをdockerグループに追加
 
     ```
